@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Phlex::Rails::Streaming
+	extend ActiveSupport::Concern
 	include ActionController::Live
 
 	private def stream(view, last_modified: Time.now.httpdate, filename: nil)
